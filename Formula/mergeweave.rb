@@ -4,17 +4,17 @@
 class Mergeweave < Formula
   desc "CLI for real-time git conflict resolution and team synchronization"
   homepage "https://mergeweave.cloud"
-  version "3.1.24"
+  version "3.2.0"
   license "Proprietary"
 
   on_macos do
     if Hardware::CPU.arm?
       url "https://api.mergeweave.cloud/downloads/v#{version}/darwin-arm64/mergeweave"
-      sha256 "ca5cc182cdaaaf10d38a12bd602da9cafcf6bf05fb3897d45a0470bc14ae7697"
+      sha256 "360e81db869a6990ee71edab67581d851c4df6439d4e3e4ff7a94581e32ad5b3"
     else
       # Intel Mac - ARM binary runs via Rosetta 2
       url "https://api.mergeweave.cloud/downloads/v#{version}/darwin-arm64/mergeweave"
-      sha256 "ca5cc182cdaaaf10d38a12bd602da9cafcf6bf05fb3897d45a0470bc14ae7697"
+      sha256 "360e81db869a6990ee71edab67581d851c4df6439d4e3e4ff7a94581e32ad5b3"
     end
   end
 
@@ -22,10 +22,10 @@ class Mergeweave < Formula
     if Hardware::CPU.arm?
       # ARM Linux - use x86_64 binary (works on most ARM systems with emulation)
       url "https://api.mergeweave.cloud/downloads/v#{version}/linux-amd64/mergeweave"
-      sha256 "16a9b5cd67bfc91cc25eec073e18efdac8d84dbbeb6011c1c364cf83977e31b7"
+      sha256 "3bba0f7f15b4c8413cf32692d70d303451ff2cde57c4cbfea49a32d941c6b0dc"
     else
       url "https://api.mergeweave.cloud/downloads/v#{version}/linux-amd64/mergeweave"
-      sha256 "16a9b5cd67bfc91cc25eec073e18efdac8d84dbbeb6011c1c364cf83977e31b7"
+      sha256 "3bba0f7f15b4c8413cf32692d70d303451ff2cde57c4cbfea49a32d941c6b0dc"
     end
   end
 
